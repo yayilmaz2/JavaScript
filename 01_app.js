@@ -15,6 +15,14 @@ console.log(typeof isim); //string
 isim = 3.14;
 console.log(typeof isim); //number
 
+var fName, lName;
+fName = "John";
+lName = "Doe";
+console.log(fName+" "+lName); 
+
+var brand="Toyota", model="Corolla";
+console.log(brand+" "+model);
+
 /* 
 *VAR eski JS sürümlerinde olan değişken tanımlama keyword'üdür.
 *VAR ile tanımlanan değişkenler her yerden ulaşılabilir.
