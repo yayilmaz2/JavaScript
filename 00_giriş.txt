@@ -1,3 +1,4 @@
 -IDE kullanmak yerine https://jsbin.com/ adresini kullanabilirsiniz.
--JS kodlarını Browser dışında çalıştırmak için Node.js yüklenmesi gerekir. Terminale "node dosyaAdı.js" yazarak çalıştırabilirsiniz.
--
+-JS kodlarını Browser dışında çalıştırmak için Node.js yüklenmesi gerekir. 
+-Terminale "node dosyaAdı.js" yazarak çalıştırabilirsiniz.
+-Browser'da console açmak için "ctrl+shift+J" kullanılır.
