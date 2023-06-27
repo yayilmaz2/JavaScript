@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers</title>
+  </head>
+  <body>
+    <script>
+      // Number data tipinde maximum 15 hane(digit) yazabilirsiniz.
+      //String olarak tanımlanmış numerik değişkenlerde aritmetik işlemler;
+      let a = "10";
+      let b = "5";
+
+      console.log(a * b); //50 çarpma işlemi yapar
+      console.log(a - b); //8 çıkarma işlemi yapar
+      console.log(a / b); //2 bölme işlemi yapar
+      console.log(a + b); // "105" toplama işlemi yapmaz. Çünkü "+" operatörü aynı zamanda concatination işlemi için kullanılır.
+
+      let c = 30;
+      console.log(c / 0); // Infinity döner. Bir sayının sıfıra bölümü sonsuz olarak tanımlanır.
+
+      console.log(c + a); // "3010" olarak string döner
+
+      // toString() metodu number data tipini stringe çevirir.
+      console.log(c.toString()); // "30" olarak string olarak döner.
+
+      // toFixed(...) metodu ondalıklı sayının ondalık basamağının sayısını belirler. Sayıyı sayıyı yuvarlar.
+      let pi = 3.14159265;
+      console.log(pi.toFixed(2)); // 3.14 döner
+      console.log(pi.toFixed(4)); // 3.1416 sayıyı yuvarlar.
+      let pi3 = 3;
+      console.log(pi3.toFixed(2)); // 3.00 ondalığı olmayan sayıya belirlenen değer kadar ondalık katar.
+
+      //toPrecision(...) metodu sayıyın toplam basamak değerini belirlemek için kullanılır.
+      console.log(pi.toPrecision(3)); //3.14 döner.
+
+      // valueOf() metodu typeOf değeri Object olanları number'a çevirmek için kullanılır.
+      // Aktif bir kullanımı yoktur. Gereksizdir.
+      let p = 123;
+      console.log(p.valueOf()); //123
+      console.log((123).valueOf()); //123
+      console.log((100 + 23).valueOf()); //123
+
+      //HERHANGİ BİR DATA TİPİNİ NUMBER'A DÖNÜŞTÜRME
+
+      // Number(...) metodu
+      Number(true); //1
+      Number(false); //0
+      Number("10"); //10
+      Number("  10"); //10
+      Number("10  "); //10
+      Number(" 10  "); //10
+      Number("10.33"); //10.33
+      Number("10,33"); //Nan
+      Number("10 33"); //Nan
+      Number("John"); //Nan
+
+      let y = "25";
+      Number(y); //25
+
+      // parseFloat(...) ve parseInt(...) metodu
+      let s = "3.14";
+
+      let numFloat = parseFloat(s);
+      console.log(numFloat); // 3.14
+
+      let numInt = parseInt(s);
+      console.log(numInt); // 3
+    </script>
+  </body>
+</html>

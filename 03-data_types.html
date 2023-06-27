@@ -8,6 +8,10 @@
 <body>
     <h2>Primitive Data Types</h2>
     <li>String</li>
+    <br>     Stringler 3 farklı yol ile tanımlanabiir
+    <br> - <b><u>" "</u></b> ile,
+    <br> - <b><u>' ' </u></b> ile,
+    <br> - <b><u> ``</u></b> ile.
     <li>Number</li>
     <li>Boolean</li>
     <li>Null</li>
@@ -15,10 +19,27 @@
     
 <script>
 //Primitive Data Types
+// JavaScript data type' ı atanan değere göre otomatik olarak belirler.
 
     //STRING
     let string = "String";
     console.log(typeof (string));
+    /*
+    Stringler 3 farklı yol ile tanımlanabiir
+        - " " ile
+        - ' ' ile
+        - ` ` ile
+    Backthick genellikle string içerisinde tırnak kullanılan bir ifade için yada expression varsa onun için kullanılır.
+    */
+    let str1 = 'Hello';
+    let str2 = `World`;
+    console.log(str1, str2);
+
+    let str3 = "String içerisinde Elon Musk'ın ne işi var";
+    console.log(str3);
+
+    let str4 = "String içerisinde `Özel İfade` kullanabilirim";
+    console.log(str4);
 
     /* NUMBER
     JS numara sadece number data type ile tanımlanmıştır. int,double gibi ayrımlar yoktur.
@@ -57,6 +78,12 @@
     console.log(araba); //undefined
     console.log(typeof(araba)); //undefined
 
+    // Non-primitive data types
+    /*
+    *Object javascript'te non-primitive ortak data tipidir. 
+    *Tanım olarak sadece "object" non-primitive data tipidir diyebiliriz.
+    *Object class içerisinde Arrays, Date vs barındırır.
+    */
 
 
 

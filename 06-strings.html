@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+      //STRINGS
+      /*STRING TANIMLAMA ==> Stringler 3 farklı işaret ile tanımlanabilir.
+       * "" ile
+       * '' ile
+       * `` ile ES6
+       * */
+
+      let name1 = "Bill";
+      let name2 = "Elon";
+      let name3 = `Mark`;
+
+      let boys = name1 + " " + name2 + " " + name3;
+      console.log(boys); // "Bill Elon Mark"
+
+      // $ ile klasik concat metodun pek farkı yoktur.
+      // ancak "+" işareti ile concat yapmaya gerek kalmaz.
+      let boysName = "There are IT guys ${name1} ${name2} ${name3}";
+      console.log(boys); // "Bill Elon Mark"
+
+      //String değerin içinde tırnak işareti kullanılması gerekirse tek tırnak yada ters tırnak kullanılır
+      let sentences = "My name is `John`";
+      console.log(sentences); // "My name is `John`"
+
+      //STRING MANIPULATION
+      /* Stringler inmutable özeliktedir değiştirilemez. 
+        Aşağıdaki metodlar sadece yeni bir değişkene atama yapılırken kullanılır
+      */
+
+      //Kullanıcıdan veri alma
+      let userName = "JavaScript"; 
+
+      //Kullanıcıdan alınan veriyi kullanma
+      console.log(userName);
+
+      // lenght metodu stringin uzunluğunu verir.
+      console.log(userName.length); // 10
+
+      // String'teki karakteri almak için charAt(index numarası) ya da [index numarası] kulanılır.
+      console.log(userName[2]); // "v"
+      console.log(userName.charAt(2)); // "v"
+
+      //toUpperCase() ve toLowerCase() metodları büyük-küçük hark değiştirir.
+      console.log(userName.toUpperCase()); // "JAVASCRIPT"
+      console.log(userName.toLowerCase()); // "javascript"
+
+      /*SLICE ve SUBSTRING ve SUBSTR METODLARI
+         slice(arg1,arg2) arg1 index değeri dahil arg2 değeri hariç string'ten karakter çeker.
+         arg2 zorunlu değildir, yazılmazsa sonuna kadar gösterir
+      */
+      let slicedName = userName.slice(2, 5).toUpperCase();
+      console.log(slicedName); // "VAS"
+
+      //// eksi değerler sondan başlar. Ancak 0'dan başlamaz -2 son iki karakter demektir.
+      let slicedName2 = userName.slice(-2, -1).toUpperCase();
+      console.log(slicedName2); // "p"
+
+      /* substring(arg1, arg2) arg1 index değeri dahil arg2 değeri hariç string'ten karakter çeker.
+           arg2 zorunlu değildir, yazılmazsa sonuna kadar gösterir.
+           slice() metoduyla aynı işlevdedir ancak eksi değerleri 0 olarak görür.
+        */
+
+      /* substr(arg1, arg2) işlev olarak diğerleri ile aynı.
+      arg2 kesilecek string değerinin uzunluğunu belirtir
+        */
+       let str1 = userName.substr(2,4);
+       console.log(str1); // "vaSc"
+
+    </script>
+  </body>
+</html>
