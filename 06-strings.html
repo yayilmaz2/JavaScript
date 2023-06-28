@@ -36,7 +36,7 @@
       */
 
       //Kullanıcıdan veri alma
-      let userName = "JavaScript"; 
+      let userName = "JavaScript";
 
       //Kullanıcıdan alınan veriyi kullanma
       console.log(userName);
@@ -47,6 +47,13 @@
       // String'teki karakteri almak için charAt(index numarası) ya da [index numarası] kulanılır.
       console.log(userName[2]); // "v"
       console.log(userName.charAt(2)); // "v"
+      console.log(userName.charCodeAt(2)); // index'teki karakterin ASCII değerini "118" verir.
+
+      // indexOf(char) ve lastIndexOf(char) metodları
+      // yazılan karakterin string içerisinde ilk karşılaştığı index değerini verir.
+      // verilen değer string içerisinde yoksa -1 döner
+      console.log(userName.indexOf("a")); // 1
+      console.log(userName.lastIndexOf("a")); // 3
 
       //toUpperCase() ve toLowerCase() metodları büyük-küçük hark değiştirir.
       console.log(userName.toUpperCase()); // "JAVASCRIPT"
@@ -71,9 +78,77 @@
       /* substr(arg1, arg2) işlev olarak diğerleri ile aynı.
       arg2 kesilecek string değerinin uzunluğunu belirtir
         */
-       let str1 = userName.substr(2,4);
-       console.log(str1); // "vaSc"
+      let str1 = userName.substr(2, 4);
+      console.log(str1); // "vaSc"
 
+      /* REPLACE(arg1,arg2) metodu
+        replace(arg1,arg2) metodu String içerisindeki arg1 değerinin yerine arg2 değerini koyar,
+        ilk gördüğü eşleşmeyi değiştirir.
+        case sensitive vardır. Ancak bunu "/i" ile görmezden gelebilir.
+        /i gibi expressions kullanılırken "" işareti kullanılmaz.
+      */
+      let replaced = userName.replace("a", "-");
+      console.log(replaced); // "J-vaScript"
+
+      let replaced1 = userName.replace(/A/i, "--"); // string değerinde "a" kullanılmasına rağmen "A" ile tanımlanabildi.
+      console.log(replaced1); // "J--vaScript"
+
+      let replaced2 = userName.replace(/a/g, "**"); // /* expressions ile tüm eşleşmeler değiştirilir.
+      console.log(replaced2); // J**v**Script
+
+      /* REPLACEALL(arg1,arg2) metodu
+        replaceAll(arg1,arg2) metodu String içerisindeki TÜM arg1 değerinin yerine arg2 değerini koyar,
+      */
+      let allReplaced = userName.replaceAll("a", ">>");
+      console.log(allReplaced); // J>>v>>Script
+
+      /* CONCAT(...,...,,,,) metodu
+        bir veya daha fazla string eklemek için kullanılır.
+      */
+      let text1 = "Hello";
+      let text2 = "World";
+      let text3 = text1.concat(" ", text2);
+      console.log(text3);
+
+      /* TRIM(), TRIMSTART(), TRIMEND() metodları
+       * trim() metodu baştaki ve sondaki boşlukları traşlar
+       * trimStart() metodu baştaki boşlukları traşlar
+       * trimEnd() metodu sondaki boşlukları traşlar
+       */
+      let willTrim = "   JavaScript   ";
+      let willTrimFull = willTrim.trim();
+      console.log(willTrimFull); // "JavaScript"
+      let willTrimStart = willTrim.trimStart();
+      console.log(willTrimStart); // "JavaScript   "
+      let willTrimEnd = willTrim.trimEnd();
+      console.log(willTrimEnd); // "   JavaScript"
+
+      //SPLIT() metodu string değeri verilen parametreye göre bölerek Array içerisine alır.
+      let text = "a,b,c,d,e,f";
+      const myArray = text.split(",");
+      console.log(myArray); // ["a", "b", "c", "d", "e", "f"]
+      const myArray1 = text.split("");
+      console.log(myArray1); // ["a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f"]
+      const myArray2 = text.split();
+      console.log(myArray2); // ["a,b,c,d,e,f"]
+
+      //MATCH(arg) ve MATCHALL(arg) metodları
+      // Parametre olarak verilen değeri string içerisindeki ilk eşleşmeyi Array içerisine alır.
+      let text5 = "a,b,c,d,e,f,a";
+      console.log(text5.match("a")); // ["a"]
+
+      // Tüm eşleşmeler için "/g" expressions kullanılır. "" tırnak işareti kullanlmaz
+      let text6 = "a,b,c,d,e,f,a";
+      console.log(text6.match(/a/g)); // ["a", "a"]
+
+      // case sensitivity olmadan almak için "/i" kullanılır.
+      let text7 = "a,b,c,d,e,f,a";
+      console.log(text7.match(/A/gi)); // ["a", "a"]
+
+      // startsWith(arg) ve endsWith(arg) metodları verilen parametre ile başladığını-bittiğini kontrol eder
+      // boolean döner
+      console.log(userName.startsWith("J")); //true
+      console.log(userName.endsWith("t")); //true
     </script>
   </body>
 </html>
