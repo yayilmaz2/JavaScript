@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparision</title>
+  </head>
+  <body>
+    <script>
+      // == / === / ! / < / > / && / ||  operatörleri kıyaslama işlemlerini gerçekleştirir.
+
+      const s1 = 5;
+
+      console.log(s1 == "5"); //true
+      console.log(s1 === "5"); //false
+      console.log(s1 != "5"); //false
+      console.log(s1 !== "5"); //true
+
+      console.log(s1 < "5"); //false
+      console.log(s1 >= "5"); //true
+
+      let s2 = true;
+      let s3 = true;
+
+      // LOGICAL OPERATORS
+
+      console.log(s2 && true); //true
+      console.log(s2 && s3); //true
+      console.log(s2 && s3 && false); //false
+
+      console.log(s2 || false); //true
+      console.log(!s2); // false
+
+      /* 0, false, null, undefined, "", Nan ==> false döner
+       *Geri kalan her ifade true döner
+       */
+    </script>
+  </body>
+</html>
