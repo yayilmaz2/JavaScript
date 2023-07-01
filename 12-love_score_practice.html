@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Score Meter</title>
+</head>
+<body>
+    <h1>Love Score Meter</h1>
+    <li>Kullanıcıdan iki adet isim alın</li>
+    <li>İsimlerdeki harflerin ASCII değerlerinin ortalamasını alarak iki ismin ortalamasını alın</li>
+    <li>Sonuç 75-80 arasındaysa "Perfect Love"</li>
+    <li>Sonuç 71-74 arasında yada 81-84 arasındaysa "Good Love"</li>
+    <li>Sonuç diğer aralıklarda ise "Bad Love" sonucunu verin</li>
+    <script>
+        let name1 = prompt("Hanım efendinin ismini giriniz");
+        let name2 = prompt("Beyefendinin ismini giriniz");
+
+        let name1Result= nameCalculate(name1) / name1.length;
+        let name2Result= nameCalculate(name2) / name2.length;
+        let finalResult = (name1Result + name2Result)/2;
+
+        if (74<finalResult<81){
+            alert("Perfect Love");
+        }else if (70<finalResult<75 || 80<finalResult<85){
+            alert("Good Love");
+        }else {
+            alert("Bad Love");
+        }
+
+        function nameCalculate(str) {
+            let x = 0;
+            for (let i = 0; i < str.length; i++) {                
+                x += str.toUpperCase().charCodeAt(i);
+            }
+            return x;
+        }
+    </script>
+</body>
+</html>
