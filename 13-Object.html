@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+
+        /*JavaScript'te referans tipleri (referance types)
+        -Functions
+        -Objects
+        -Array
+
+        {} object oluşturmak için kullanılır
+        : key-value eşleştirmesi için kullanılır
+        , birden çok data oluşturmak için kullanılır
+        */
+
+        // 3 data bulunduran bir object oluşturalım.
+        var person = {
+            fName : 'John',
+            lName : 'Cash',
+            age : 37,
+            isEmployed : true
+        };
+
+        // Oluşturduğumuz datanın her birini çağırmak için "." notation kullanıyoruz
+        console.log(person); // tüm veriyi getirir.
+        console.log(person.fName); // "John"
+
+        // JSON içerisindeki değerleri değiştirme
+        person.fName = "Sam";
+        console.log(person.fName); // "Sam"
+
+        person['lName'] = "Blair";
+        console.log(person.lName); // "Blair"
+
+        var newName = 'fname';
+        person[newName] = 'william';
+        console.log(person.fName); // "william
+
+        // NESTED OBJECTS
+        var personInfo = {
+            fName: "John",
+            lName: "Doe",
+            age : 18,
+            address : {
+                street : "6th Ave.",
+                city : "Seattle",
+                state : "WA"
+            },
+            hobbies : ["soccer", "fishing", "hunting"],
+            salary : function () {
+                return '100k yearly'
+            }
+        }
+
+        console.log(personInfo.address.street); //"6th Ave."
+        console.log(personInfo.hobbies); // ["soccer", "fishing", "hunting"]
+        console.log(personInfo.hobbies[2]); // "hunting"
+        console.log(personInfo.hobbies[3]); // undefined
+        console.log(personInfo.salary); // 
+
+    </script>
+</body>
+</html>

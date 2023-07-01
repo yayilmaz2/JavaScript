@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. function deklare etmek
+        function greet(){
+            console.log("Hello World");        
+        }
+
+        // 2. function çağırma
+        greet(); // "Hello World"
+
+        // 3. parametreli function deklare etmek
+        function greetPeople(arg){
+            console.log(`Hello ${arg}`);
+        }
+
+        //4. parametreli function çağırma
+        greetPeople("John") //"Hello John"
+
+        // return eden function
+        let num1 = 5, num2=6;
+        sum(num1, num2); // function invoke edildi ve result alındı.
+
+        function sum(a,b){
+            console.log(a+b);
+            return a + b;
+        }
+
+        console.log(sum(num1, num2)+12); // 23
+
+        // function'ı değişkene bağlama
+        let func1= function (a,b){
+            console.log(a+b);
+        }
+
+        func1(4,5); //
+    </script>
+</body>
+</html>

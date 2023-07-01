@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // switch === operatörü ile çalışır. type kontrolü de yapar.
+        //default keyword'ün yeri önemli değildir.
+
+        const result = 5    // güncel tarih için new Date().getDay();
+        console.log (result)
+        switch(result){
+
+            case 0:
+                console.log("Pazar"); 
+                break;
+            case 1:
+                console.log("Pazartesi");
+                break;
+            case 2:
+                console.log("Salı");
+                break;
+            case 3:
+                console.log("Çarşamba");
+                break;
+            case 4:
+                console.log("Perşembe");
+                break;
+            case 5:
+                console.log("Cuma");
+                break;
+            case 6:
+                console.log("Cumartesi");
+                break;
+            default:
+                console.log("Böyle bir gün yok");
+
+        }
+    </script>
+</body>
+</html>

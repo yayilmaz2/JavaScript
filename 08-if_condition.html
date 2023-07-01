@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* if condition'da parantez içi boolean döner,
+       *if condition koşullar sağlandığında if bloğunun içindeki kod çalışır.
+       * Koşul sağlanmadığında sonraki koşul koşturulur. Bu "else if" yada "else" bloğu olabilir.
+       * İf bloğunun içi yukarıdan aşağı çalışır.
+       */
+      if (true) {
+        //burada parantezin içi true döneceğinden sadece if bloğu çalışır.
+        /* 0, false, null, undefined, "", Nan ==> false döner
+         *Geri kalan her ifade true döner
+         */
+        console.log("Koşul sağlandı");
+      } else {
+        console.log("Koşul sağlanamadı");
+      }
+
+      let x = 10;
+
+      if (x < 10) {
+        console.log("sayı küçük");
+      } else if (x == 10) {
+        ("sayı 10'a eşittir");
+      } else {
+        console.log("sayı 10'dan büyüktür");
+      }
+
+      //-------------------TERNARY IF CONDITION-----------------------------
+
+      const num1 = 45;
+
+      if(x<50){
+
+        if(x%2==0){
+            console.log("50'den küçük çift sayı")
+        }else {
+            console.log("50'den küçük tek sayı");
+        }
+
+      }else{
+        console.log("50'den büyüktür");
+      }
+
+
+    </script>
+  </body>
+</html>
